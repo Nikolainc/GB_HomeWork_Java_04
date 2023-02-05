@@ -3,7 +3,6 @@ package Class;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.logging.*;
 
 public class Calculator {
 
