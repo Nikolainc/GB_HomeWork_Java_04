@@ -44,6 +44,23 @@ public class QueueList<T>{
 
     }
 
+    public T dequeue(T obj) {
+
+        if (_queue.contains(obj)) {
+
+            System.out.println("Error, queue is empty");
+            return null;
+
+        } else {
+
+            T result = _queue.get(_queue.indexOf(obj));
+            _queue.remove(obj);
+            return result;
+
+        }
+
+    }
+
     public T first(){
 
         if(_queue.isEmpty()){
@@ -55,6 +72,29 @@ public class QueueList<T>{
 
             return _queue.getFirst();
 
+        }
+
+    }
+
+    public T last(){
+
+        if (_queue.isEmpty()) {
+
+            System.out.println("Error, queue is empty");
+            return null;
+
+        } else {
+
+            return _queue.getLast();
+
+        }
+
+    }
+
+    public void clear(){
+
+        for (int i = 0; i < _queue.size(); i++) {
+            dequeue();
         }
 
     }

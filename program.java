@@ -1,12 +1,14 @@
+import java.io.IOException;
 import java.util.LinkedList;
 import Class.ListOperator;
 import Class.QueueList;
+import Class.Calculator;
 
 class program {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        LinkedList<Integer> list = ListOperator.fillRandom(10, 100);
+        /* LinkedList<Integer> list = ListOperator.fillRandom(10, 100);
 
         ListOperator.print(list);
 
@@ -25,7 +27,11 @@ class program {
         System.out.println(queue.dequeue());
         System.out.println(queue.first());
 
-        queue.print();
+        queue.print(); */
+
+        Calculator calc = new Calculator();
+
+        calc.startCalc();
 
     }
 
